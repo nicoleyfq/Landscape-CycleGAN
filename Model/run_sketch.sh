@@ -1,6 +1,8 @@
 CURRENT_DIR=`pwd`
-export OUTPUR_DIR=$CURRENT_DIR/data/sketch
+#change output directory 
+export OUTPUR_DIR=../data/sketch/landscape
 
+#change subset
 python3 sketch.py \
-  --subset='Princeton' \
+  --subset='landscape' \
   --output_dir=$OUTPUR_DIR

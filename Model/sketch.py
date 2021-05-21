@@ -92,6 +92,7 @@ def rgb_to_sketch(src_image_name, dst_image_name):
 def getTrain(train_abs_path):
     '''get the name of train pictures here '''
     train_scenes_list = []
+    #print(train_abs_path)
     for (root, dirs,files) in os.walk(train_abs_path):
         for filename in files:
             if filename.endswith('jpg'):
@@ -104,16 +105,17 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--subset", default='Harvard', type=str, required=False,
                         help="The input data dir. Should be Haravd etc.")
-    parser.add_argument("--output_dir", default='./data/sketch', type=str, required=False,
+    parser.add_argument("--output_dir", default='../data/sketch', type=str, required=False,
                         help="The output data dir.")
     args = parser.parse_args()
     if not os.path.exists(args.output_dir):
         os.mkdir(args.output_dir)
     #print(args.output_dir)
     data_path = args.subset + '/jpg/'
-    img_path = os.path.join('./data/paintings/',data_path)
-    save_path= os.path.join(args.output_dir,args.subset)
-    #print(save_path)
+    img_path = os.path.join('../data/paintings/',data_path)
+    #print(img_path)
+    save_path= os.path.join(args.output_dir)
+    print(save_path)
     data_list = getTrain(img_path)
     print('*****Running sketch process for dataset:',args.subset,'*****')
     print('Size of input dataset is:',len(data_list))
