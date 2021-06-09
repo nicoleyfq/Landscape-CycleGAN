@@ -1,6 +1,7 @@
 # Landscape-CycleGAN
 Style transfer is a class of computer vision problem where the objective is to map target-style learned through training using a set of aligned image pairs from an input image to an output image. Our project explores the possibilities of utilizing Generative Adversarial Networks (GANs) to achieve Chinese landscape painting style transfer to images. We propose the methodology of generating Chinese landscape paintings using canny edge extraction algorithms to extract edges of input images and then use CycleGAN models to produce output images.
 
+![alt text](./report_images/intro.png)
 # Table of Contents  
 1. [Folder Organization](#folder)
 2. [How to Run Code](#run)  
@@ -49,7 +50,7 @@ Note: change the sub-dataset name inside shell script to change the training dat
 
 <a name="data"/></a>
 ## About Dataset
-The dataset we used for training and testing were from https://github.com/alicex2020/Chinese-Landscape-Painting-Datasetwe, which provided the dataset used to train GAN model. 
+The dataset we used for training and testing were from https://github.com/alicex2020/Chinese-Landscape-Painting-Dataset, which provided the dataset used to train GAN model. 
 The dataset consists of 2,192 high-quality traditional Chinese landscape paintings (中国山水画). All paintings are sized 512x512, from the following sources:
 * <a href=https://artmuseum.princeton.edu/search/collections>Princeton University Art Museum</a>, 362 paintings
 * <a href=https://harvardartmuseums.org/collections/api>Harvard University Art Museum</a>, 101 paintings
